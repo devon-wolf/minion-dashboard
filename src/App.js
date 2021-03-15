@@ -34,7 +34,8 @@ export default class App extends Component {
     return (
       <Router>
 
-        <Header 
+        <Header
+        token={this.state.token}
         handleLogoutClick={this.handleLogoutClick}
         />
 

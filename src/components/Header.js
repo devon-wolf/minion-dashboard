@@ -17,31 +17,36 @@ export default class Header extends Component {
 						Home
 					</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/login">
-						Login
-					</NavLink>
+					{this.props.token
+						?	<>
+							<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/list">
+								List
+							</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/list">
-						List
-					</NavLink>
+							<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/new">
+								New Entry
+							</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/new">
-						New Entry
-					</NavLink>
+							<span className={style.logout} onClick={this.props.handleLogoutClick}>Logout</span>
+							</>
 
-					<span className={style.logout} onClick={this.props.handleLogoutClick}>Logout</span>
+						:	<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/login">
+								Login
+							</NavLink>
+					
+					}
 				</nav>
 			</header>
 		)
