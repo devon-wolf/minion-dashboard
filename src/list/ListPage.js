@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getAllResponses, deleteResponse, editResponse } from '../utils/server-utils.js'
+import { getAllResponses, deleteResponse } from '../utils/server-utils.js'
 import style from './ListPage.module.css'
 import ResponseTable from './ResponseTable.js'
 
@@ -35,6 +35,7 @@ export default class ListPage extends Component {
 				<ResponseTable 
 				data={this.state.entries}
 				handleDeleteClick={this.removeEntry}
+				handleEditClick={e => this.props.history.push('/update')}
 				/>
 			</main>
 		)
