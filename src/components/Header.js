@@ -6,7 +6,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<header>
-				<h1>Header</h1>
+				<h1>Bot Dashboard</h1>
 
 				<nav>
 					<NavLink 
