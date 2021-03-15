@@ -9,6 +9,7 @@ async function getUserAuth(username, password, authRoute) {
 		return response.body;
 }
 
+// this is set up so that new users can't be directly created through the frontend; a new account can still be created through postman/other means of post requests if needed
 export async function loginOrSignup(username, password) {
 	let response = {};
 	try {
@@ -24,6 +25,6 @@ export async function loginOrSignup(username, password) {
 		};
 		console.log('could not sign in user');
 	}
-	console.log(response);
+	
 	return response;
 }
