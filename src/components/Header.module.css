@@ -1,5 +1,29 @@
+.header {
+	background-color: teal;
+	padding: .5rem;
+}
+
+.header h1 {
+	margin: 0;
+	color: gold;
+}
+
+.navItem {
+	margin: .5rem;
+	float: left;
+	text-decoration: none;
+	color: powderblue;
+}
+
 .logout {
-	cursor: pointer
+	cursor: pointer;
+	margin: .5rem;
+	color: powderblue;
+	float: right;
+}
+
+.clearBar {
+	clear: both;
 }
 
 .current {

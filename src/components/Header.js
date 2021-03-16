@@ -5,19 +5,18 @@ import style from './Header.module.css'
 export default class Header extends Component {
 	render() {
 		return (
-			<header>
+			<header className={style.header}>
 				<h1>Bot Dashboard</h1>
-
-				<nav>
-					<NavLink 
+				
+				<NavLink 
 						exact 
 						activeClassName={style.current} 
 						className={style.navItem} 
 						to="/">
 						Home
-					</NavLink>
+				</NavLink>
 
-					{this.props.token
+				{this.props.token
 						?	<>
 							<NavLink 
 								exact 
@@ -47,7 +46,7 @@ export default class Header extends Component {
 							</NavLink>
 					
 					}
-				</nav>
+				<div className={style.clearBar}></div>
 			</header>
 		)
 	}
