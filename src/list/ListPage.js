@@ -31,6 +31,7 @@ export default class ListPage extends Component {
 				data={this.state.entries}
 				handleDeleteClick={this.removeEntry}
 				token={this.props.token}
+				updateFunction={this.loadEntries}
 				/>
 			</main>
 		)

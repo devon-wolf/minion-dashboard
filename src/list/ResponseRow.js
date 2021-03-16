@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import style from './ListPage.module.css'
-import { editResponse } from '../utils/server-utils.js'
+import { editResponse, getResponseByID } from '../utils/server-utils.js'
 
 export default class ResponseRow extends Component {
 	state = {
 		editing: false,
 		triggerInput: '',
-		imageInput: ''
+		imageInput: '',
 	}
 
 	handleEditClick = e => {
@@ -31,11 +31,13 @@ export default class ResponseRow extends Component {
 			? editedObject.images.push(imageInput) 
 			: editedObject.images = images;
 
-		console.log(editedObject);
-
 		await editResponse(id, editedObject, token);
 
-		this.setState({ editing: false });
+		this.setState({ 
+			editing: false,
+		});
+
+		this.props.updateFunction();
 	}
 
 	render() {

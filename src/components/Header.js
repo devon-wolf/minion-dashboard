@@ -6,7 +6,7 @@ export default class Header extends Component {
 	render() {
 		return (
 			<header className={style.header}>
-				<h1>Bot Dashboard</h1>
+				<h2>Bot Dashboard</h2>
 				
 				<NavLink 
 						exact 

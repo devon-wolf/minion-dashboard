@@ -1,26 +1,26 @@
 .header {
-	background-color: teal;
-	padding: .5rem;
+	background-color: gold;
+	padding: .25rem;
 	position: sticky;
 	top: 0px;
 }
 
-.header h1 {
+.header h2 {
 	margin: 0;
-	color: gold;
+	color: darkslateblue;
 }
 
 .navItem {
 	margin: .5rem;
 	float: left;
 	text-decoration: none;
-	color: powderblue;
+	color: darkslateblue;
 }
 
 .logout {
 	cursor: pointer;
 	margin: .5rem;
-	color: powderblue;
+	color: darkslateblue;
 	float: right;
 }
 

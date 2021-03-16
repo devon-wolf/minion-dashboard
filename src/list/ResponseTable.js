@@ -24,6 +24,7 @@ export default class ResponseTable extends Component {
 							images={item.images}
 							handleDeleteClick={e => this.props.handleDeleteClick(item.id)}
 							token={this.props.token}
+							updateFunction={this.props.updateFunction}
 							key={item.id + item.regex}
 						/>
 					)}
