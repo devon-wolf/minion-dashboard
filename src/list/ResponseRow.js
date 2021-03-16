@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import style from './ListPage.module.css'
-import { editResponse, getResponseByID } from '../utils/server-utils.js'
+import { editResponse } from '../utils/server-utils.js'
 
 export default class ResponseRow extends Component {
 	state = {

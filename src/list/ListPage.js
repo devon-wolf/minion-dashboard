@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { getAllResponses, deleteResponse } from '../utils/server-utils.js'
-import style from './ListPage.module.css'
 import ResponseTable from './ResponseTable.js'
 
 export default class ListPage extends Component {
