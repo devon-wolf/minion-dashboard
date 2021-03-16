@@ -1,5 +1,31 @@
+.header {
+	background-color: gold;
+	padding: .25rem;
+	position: sticky;
+	top: 0px;
+}
+
+.header h2 {
+	margin: 0;
+	color: darkslateblue;
+}
+
+.navItem {
+	margin: .5rem;
+	float: left;
+	text-decoration: none;
+	color: darkslateblue;
+}
+
 .logout {
-	cursor: pointer
+	cursor: pointer;
+	margin: .5rem;
+	color: darkslateblue;
+	float: right;
+}
+
+.clearBar {
+	clear: both;
 }
 
 .current {

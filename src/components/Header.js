@@ -5,44 +5,48 @@ import style from './Header.module.css'
 export default class Header extends Component {
 	render() {
 		return (
-			<header>
-				<h1>Header</h1>
-
-				<nav>
-					<NavLink 
+			<header className={style.header}>
+				<h2>Bot Dashboard</h2>
+				
+				<NavLink 
 						exact 
 						activeClassName={style.current} 
 						className={style.navItem} 
 						to="/">
 						Home
-					</NavLink>
+				</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/login">
-						Login
-					</NavLink>
+				{this.props.token
+						?	<>
+							<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/list">
+								List
+							</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/list">
-						List
-					</NavLink>
+							<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/new">
+								New Entry
+							</NavLink>
 
-					<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/new">
-						New Entry
-					</NavLink>
+							<span className={style.logout} onClick={this.props.handleLogoutClick}>Logout</span>
+							</>
 
-					<span className={style.logout} onClick={this.props.handleLogoutClick}>Logout</span>
-				</nav>
+						:	<NavLink 
+								exact 
+								activeClassName={style.current} 
+								className={style.navItem} 
+								to="/login">
+								Login
+							</NavLink>
+					
+					}
+				<div className={style.clearBar}></div>
 			</header>
 		)
 	}
