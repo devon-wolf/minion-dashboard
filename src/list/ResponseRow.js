@@ -60,30 +60,31 @@ export default class ResponseRow extends Component {
 				<td className={style.imageCell}>
 					{this.props.images.map(image =>
 						<div key={image}>
-						<img 
-						src={image} 
-						alt="response" 
-						/>
-						{this.state.editing && 
-						<input
-						placeholder={image} 
-						onInput={e => this.setState({ imageInput: e.target.value })}/>}
+							<img 
+							src={image} 
+							alt="response" 
+							/>
+							{this.state.editing && 
+							<input
+							placeholder={image} 
+							onInput={e => this.setState({ imageInput: e.target.value })}/>}
 						</div>)}
 				</td>
 
 				<td>
 					{this.state.editing
 						?	<>
-							<button
-							onClick={this.handleSubmitClick}
-							>
-							Submit Changes
-							</button>
-							<button
-							onClick={this.handleEditClick}>
-								Cancel Edits
-							</button>
+								<button
+								onClick={this.handleSubmitClick}
+								>
+								Submit Changes
+								</button>
+								<button
+								onClick={this.handleEditClick}>
+									Cancel Edits
+								</button>
 							</>
+							
 						: 	<button
 							value={this.props.id}
 							onClick={this.handleEditClick}>

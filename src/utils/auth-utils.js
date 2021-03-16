@@ -13,11 +13,9 @@ async function getUserAuth(username, password, authRoute) {
 export async function loginOrSignup(username, password) {
 	let response = {};
 	try {
-		// console.log('trying to login');
 		response = await getUserAuth(username, password, 'signin');
 	}
 	catch(e) {
-		// console.log('entered CATCH block');
 		response = {
 			id: '', 
 			username: '', 

@@ -10,7 +10,6 @@ import Header from './components/Header.js'
 import LoginPage from './auth/LoginPage.js'
 import ListPage from './list/ListPage.js'
 import NewEntryPage from './new/NewEntryPage.js'
-import UpdateEntryPage from './update/UpdateEntryPage.js'
 import { getToken, storeToken } from './utils/local-storage-utils.js'
 
 export default class App extends Component {
@@ -61,13 +60,6 @@ export default class App extends Component {
             exact
             token={this.state.token}
             render={(routerProps) => <NewEntryPage {...routerProps} />}
-          />
-
-          <PrivateRoute 
-            path="/update"
-            exact
-            token={this.state.token}
-            render={(routerProps) => <UpdateEntryPage {...routerProps} />}
           />
 
         </Switch>
