@@ -3,7 +3,7 @@ import SingleEntryForm from './SingleEntryForm.js'
 
 export default class NewEntryPage extends Component {
 
-	returnToList = () => this.props.history.push('/list');
+	returnToList = () => this.props.history.push('/');
 
 	render() {
 		return (

@@ -7,7 +7,6 @@ import {
 } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute.js' 
 import Header from './components/Header.js'
-import HomePage from './home/HomePage.js'
 import LoginPage from './auth/LoginPage.js'
 import ListPage from './list/ListPage.js'
 import NewEntryPage from './new/NewEntryPage.js'
@@ -40,11 +39,6 @@ export default class App extends Component {
         />
 
         <Switch>
-          <Route
-            path="/"
-            exact
-            render={(routerProps) => <HomePage {...routerProps} />}
-          />
 
           <Route 
             path="/login"
@@ -56,7 +50,7 @@ export default class App extends Component {
           />
 
           <PrivateRoute 
-            path="/list"
+            path="/"
             exact
             token={this.state.token}
             render={(routerProps) => <ListPage {...routerProps} />}

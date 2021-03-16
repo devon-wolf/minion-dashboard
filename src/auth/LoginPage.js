@@ -5,7 +5,7 @@ export default class LoginPage extends Component {
 
 	handleFormSubmit = (user) => {
 		this.props.handleUserChange(user);
-		this.props.history.push('/search');
+		this.props.history.push('/');
 	}
 
 	render() {
