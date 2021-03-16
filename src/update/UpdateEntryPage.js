@@ -4,7 +4,7 @@ export default class UpdateEntryPage extends Component {
 	render() {
 		return (
 			<main>
-				
+				UPDATE PAGE
 			</main>
 		)
 	}

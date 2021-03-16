@@ -35,7 +35,7 @@ export default class ListPage extends Component {
 				<ResponseTable 
 				data={this.state.entries}
 				handleDeleteClick={this.removeEntry}
-				handleEditClick={e => this.props.history.push('/update')}
+				token={this.props.token}
 				/>
 			</main>
 		)

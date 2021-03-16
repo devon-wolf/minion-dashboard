@@ -1,0 +1,21 @@
+.table {
+	width: 90vw;
+	border: solid 4px slateblue;
+}
+
+.table thead {
+	background-color: springgreen;
+}
+
+.table tbody {
+	background-color: thistle;
+}
+
+.table td {
+	text-align: center;
+	padding: .5rem;
+}
+
+.imageCell img {
+	max-height: 40vh;
+}

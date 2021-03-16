@@ -3,6 +3,7 @@ import ResponseRow from './ResponseRow.js'
 import style from './ListPage.module.css'
 
 export default class ResponseTable extends Component {
+
 	render() {
 		return (
 			<table className={style.table}>
@@ -17,10 +18,12 @@ export default class ResponseTable extends Component {
 				<tbody>
 					{this.props.data.map(item => 
 						<ResponseRow 
+							fullItem={item}
 							id={item.id}
 							trigger={item.regex}
 							images={item.images}
 							handleDeleteClick={e => this.props.handleDeleteClick(item.id)}
+							token={this.props.token}
 							key={item.id + item.regex}
 						/>
 					)}
