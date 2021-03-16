@@ -10,7 +10,11 @@ export default class ResponseRow extends Component {
 	}
 
 	handleEditClick = e => {
-		this.setState({ editing: !this.state.editing });
+		this.setState({
+			editing: !this.state.editing,
+			triggerInput: '',
+			imageInput: ''
+		});
 	}
 
 	// this does not at all handle the possibility of multiple images
@@ -20,8 +24,12 @@ export default class ResponseRow extends Component {
 		
 		const editedObject = {};
 		editedObject.images = [];
-		triggerInput ? editedObject.regex = triggerInput : editedObject.regex = trigger;
-		imageInput ? editedObject.images.push(imageInput) : editedObject.images = images;
+		triggerInput 
+			? editedObject.regex = triggerInput 
+			: editedObject.regex = trigger;
+		imageInput 
+			? editedObject.images.push(imageInput) 
+			: editedObject.images = images;
 
 		console.log(editedObject);
 
@@ -63,12 +71,17 @@ export default class ResponseRow extends Component {
 
 				<td>
 					{this.state.editing
-						?	<button
+						?	<>
+							<button
 							onClick={this.handleSubmitClick}
 							>
 							Submit Changes
 							</button>
-					
+							<button
+							onClick={this.handleEditClick}>
+								Cancel Edits
+							</button>
+							</>
 						: 	<button
 							value={this.props.id}
 							onClick={this.handleEditClick}>
@@ -76,7 +89,6 @@ export default class ResponseRow extends Component {
 							</button>
 					}
 					
-
 					<button
 					onClick={this.props.handleDeleteClick}>
 						Remove

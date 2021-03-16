@@ -45,7 +45,7 @@ export default class NewEntryForm extends Component {
 
 	render() {
 		console.log(this.state.responses);
-		const { regexInput, images, imageInput } = this.state;
+		const { regexInput, imageInput } = this.state;
 
 		return (
 			<form onSubmit={this.handleSubmit}>
@@ -63,7 +63,7 @@ export default class NewEntryForm extends Component {
 						value={imageInput}
 						onInput={e => this.setState({ imageInput: e.target.value })}/>
 						
-						<button
+						{/* <button
 						type="button"
 						onClick={this.handleImageAdd}>
 							Add this image
@@ -73,7 +73,7 @@ export default class NewEntryForm extends Component {
 							{images.map(image =>
 								<img alt="added item" src={image} key={image} />)
 							}
-						</div>
+						</div> */}
 						
 					</label>
 					
