@@ -11,7 +11,8 @@ export default class LoginPage extends Component {
 	render() {
 		return (
 			<main>
-				<h2>Login</h2>
+				<h2>Admin Login</h2>
+				
 				<AuthForm 
 				handleFormSubmit={this.handleFormSubmit}/>
 			</main>

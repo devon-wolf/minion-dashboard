@@ -24,7 +24,9 @@ export default class NewEntryForm extends Component {
 		if (imageInput) this.handleImageAdd();
 
 		const currentResponses = responses;
-		responses.push({ regex: regexInput, images });
+		currentResponses.push({ regex: regexInput, images });
+
+		this.props.addResponses(currentResponses);
 
 		this.setState({
 			responses: currentResponses,
@@ -44,7 +46,6 @@ export default class NewEntryForm extends Component {
 	}
 
 	render() {
-		console.log(this.state.responses);
 		const { regexInput, imageInput } = this.state;
 
 		return (
@@ -63,6 +64,7 @@ export default class NewEntryForm extends Component {
 						value={imageInput}
 						onInput={e => this.setState({ imageInput: e.target.value })}/>
 						
+						{/* Removed ability to add multiple images until it is better handled in the edit functionality */}
 						{/* <button
 						type="button"
 						onClick={this.handleImageAdd}>
