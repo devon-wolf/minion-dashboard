@@ -7,14 +7,6 @@ export default class Header extends Component {
 		return (
 			<header className={style.header}>
 				<h2>Bot Dashboard</h2>
-				
-				<NavLink 
-						exact 
-						activeClassName={style.current} 
-						className={style.navItem} 
-						to="/">
-						Home
-				</NavLink>
 
 				{this.props.token
 						?	<>
@@ -22,7 +14,7 @@ export default class Header extends Component {
 								exact 
 								activeClassName={style.current} 
 								className={style.navItem} 
-								to="/list">
+								to="/">
 								List
 							</NavLink>
 
