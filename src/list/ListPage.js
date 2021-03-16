@@ -27,11 +27,6 @@ export default class ListPage extends Component {
 	render() {
 		return (
 			<main>
-				<button
-				 className={style.addButton}
-				 onClick={e => this.props.history.push('/new')}
-				 >Add New Entry</button>
-
 				<ResponseTable 
 				data={this.state.entries}
 				handleDeleteClick={this.removeEntry}
